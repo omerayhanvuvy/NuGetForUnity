@@ -778,15 +778,15 @@ namespace NugetForUnity.PackageSource
             var password = packageSource.ExpandedPassword;
             var userName = packageSource.ExpandedUserName;
 
-            if (string.IsNullOrEmpty(password) && packageSource.EnableCredentialProvider)
-            {
-                var creds = CredentialProviderHelper.GetCredentialFromProvider(apiIndexJsonUrl);
-                if (creds.HasValue)
-                {
-                    userName = creds.Value.UserName;
-                    password = creds.Value.Password;
-                }
-            }
+            // if (string.IsNullOrEmpty(password) && packageSource.EnableCredentialProvider)
+            // {
+            //     var creds = CredentialProviderHelper.GetCredentialFromProvider(apiIndexJsonUrl);
+            //     if (creds.HasValue)
+            //     {
+            //         userName = creds.Value.UserName;
+            //         password = creds.Value.Password;
+            //     }
+            // }
 
             if (!string.IsNullOrEmpty(password))
             {
